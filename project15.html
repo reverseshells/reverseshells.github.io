@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+    <title>Generic Page - Massively by HTML5 UP</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+        .add-spacing {
+            margin-left: 10px;
+            /* Adjust the value as needed */
+        }
+    </style>
+    <style>
+        .add-spacing2 {
+            margin-left: 50px;
+            /* Adjust the value as needed */
+        }
+    </style>
+</head>
+
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+        </header>
+
+        <!-- Nav -->
+        <nav id="nav">
+            <ul class="links">
+                <li class="active"><a href="thirdpage.html">Projects</a></li>
+                <li class="active"><a href="project15.html">Cybersecurity Incident Report: SYN flood attack</a></li>
+            </ul>
+            <ul class="icons">
+                <li><a href="https://www.linkedin.com/in/dzhaner-mustafov-229364284/" class="icon brands fa-linkedin"><span class="label">Instagram</span></a></li>
+                <li><a href="https://github.com/reverseshells" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Post -->
+            <section class="post">
+                <header class="major">
+                    <h1>Cybersecurity Incident Report: SYN flood attack</h1>
+                </header>
+
+                <p>
+                    <h2>Section 1: Identify the type of attack:</h2><br>
+                    <strong> ⦁ One potential explanation for the website's connection timeout error message is:</strong>
+                    <br.>
+                        <strong>⦁	This event could be:</strong><br> ⦁ A <strong>network-level denial of service (DoS) attack </strong>, specifically a <strong>SYN flood attack.</strong>
+                </p>
+                <p>
+                    <h2>Section 2: Explain how the attack is causing the website to malfunction:</h2><br>
+                    <strong>⦁	Three-way Handshake Steps:</strong><br>
+                    <strong>⦁	[SYN] (log items 52, 58, 69):</strong><br> ⦁ Initial request from an employee visitor to connect to the web server.<br><strong>[SYN, ACK] (log items 53, 56, 58):</strong><br> ⦁ Web server's response agreeing to the connection,
+                    reserving resources.<br>
+                    <strong>[ACK] (log items 58, 60, 62):</strong><br> ⦁ The visitor's machine acknowledges the permission to connect.
+                </p>
+                <p>
+                    <h2>Impact:</h2><br>
+                    <strong>
+                    ⦁	Malicious Actor's SYN Flood Attack:<br>
+                    ⦁	Sending a large number of SYN packets (highlighted red in the logs).<br>
+                    ⦁	Normal SYN requests (highlighted green) get responses initially.<br>
+                    ⦁	Logs (items 125 onwards) show the server stops responding to legitimate traffic.<br>
+                    ⦁	Logs Indication:<br>
+                    ⦁	Abnormal number of SYN requests (red highlighting).<br>
+                    ⦁	Yellow highlighted rows indicate failed communications between legitimate visitors and the server.<br>
+                    ⦁	Errors in the logs include HTTP/1.1 504 Gateway Time-out and [RST, ACK] packets.<br>
+                    ⦁	Impact on Server:<br>
+                    ⦁	Overwhelmed by the SYN flood attack.<br>
+                    ⦁	Unable to respond to legitimate connection attempts.<br>
+                    ⦁	Network-level denial of service.<br>
+                </strong>
+                </p>
+                <p>
+                    <h2>Recommendations:</h2><br>
+                    <strong>⦁	Immediate Action:</strong><br> ⦁ Server temporarily taken offline for recovery.<br> ⦁ Firewall configured to block the IP address responsible for the abnormal SYN requests.<br>
+                    <strong>⦁	Next Steps:</strong><br>
+                    <strong>⦁	Short-Term:</strong><br> ⦁ Monitoring and adjusting firewall rules.<br> ⦁ Regularly checking and blocking suspicious IP addresses.<br>
+                    <strong>⦁	Long-Term:</strong><br> ⦁ Implementing rate limiting to prevent SYN flood attacks.<br> ⦁ Collaborating with the network team to enhance DDoS protection.<br> ⦁ Next Generation Firewall (NGFW) performs deep packet inspection
+                    and protection against DOS and DDOS attacks <br>
+                </p>
+            </section>
+
+        </div>
+
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

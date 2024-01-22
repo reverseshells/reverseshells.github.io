@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+    <title>Generic Page - Massively by HTML5 UP</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+        .add-spacing {
+            margin-left: 10px;
+            /* Adjust the value as needed */
+        }
+    </style>
+    <style>
+        .add-spacing2 {
+            margin-left: 50px;
+            /* Adjust the value as needed */
+        }
+    </style>
+</head>
+
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+        </header>
+
+        <!-- Nav -->
+        <nav id="nav">
+            <ul class="links">
+                <li class="active"><a href="secondpage.html">Projects</a></li>
+                <li class="active"><a href="project9.html">Cryptographic Decryption and Data Recovery Report</a></li>
+            </ul>
+            <ul class="icons">
+                <li><a href="https://www.linkedin.com/in/dzhaner-mustafov-229364284/" class="icon brands fa-linkedin"><span class="label">Instagram</span></a></li>
+                <li><a href="https://github.com/reverseshells" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Post -->
+            <section class="post">
+                <header class="major">
+                    <h1>Cryptographic Decryption and Data Recovery Report</h1>
+                </header>
+
+                <p>
+                    <h2>Introduction</h2><br> As a security analyst, the ability to decrypt files and recover data is crucial for understanding and mitigating potential security threats. In this lab activity, we were presented with an encrypted home directory
+                    and tasked with deciphering the contents using Linux commands. The primary goal was to unveil hidden messages encrypted using the Caesar cipher.
+                </p>
+                <p>
+                    <h2>Task 1: Reading Contents of a File</h2><br> I began by exploring the home directory and examining the contents of a file named README.txt. The README.txt file provided essential instructions, guiding me towards a hidden file in the
+                    'caesar' subdirectory. This hidden file, encrypted using the Caesar cipher, contained further instructions for data recovery
+                </p>
+                <p>
+                    <h2>Task 2: Finding a Hidden File</h2><br> Upon navigating to the 'caesar' subdirectory, i uncovered a hidden file named '.leftShift3.' This file employed a Caesar cipher with a left shift of three letters. Leveraging the 'tr' command,
+                    i successfully decrypted the hidden message, revealing a command for decrypting the encrypted data file in the next task.
+                </p>
+                <p>
+                    <h2>Task 3: Decrypting a File</h2><br> In the final task, armed with the decryption command provided in the '.leftShift3' file, i applied it to decrypt the 'Q1.encrypted' file in our home directory. The command utilized the OpenSSL tool,
+                    employing AES-256-CBC encryption with enhanced security through the -pbkdf2 option. The decrypted file, 'Q1.recovered,' was successfully generated.
+                </p>
+                <p>
+                    <a><img src="images/en.jpg" alt="" /></a><br>
+                    <a><img src="images/en2.jpg" alt="" /></a>
+                </p>
+            </section>
+
+        </div>
+
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

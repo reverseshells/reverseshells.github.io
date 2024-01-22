@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+    <title>Generic Page - Massively by HTML5 UP</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+        .add-spacing {
+            margin-left: 10px;
+            /* Adjust the value as needed */
+        }
+    </style>
+    <style>
+        .add-spacing2 {
+            margin-left: 50px;
+            /* Adjust the value as needed */
+        }
+    </style>
+</head>
+
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+        </header>
+
+        <!-- Nav -->
+        <nav id="nav">
+            <ul class="links">
+                <li class="active"><a href="thirdpage.html">Projects</a></li>
+                <li class="active"><a href="project16.html">Cybersecurity Incident Report: Network Traffic </a></li>
+            </ul>
+            <ul class="icons">
+                <li><a href="https://www.linkedin.com/in/dzhaner-mustafov-229364284/" class="icon brands fa-linkedin"><span class="label">Instagram</span></a></li>
+                <li><a href="https://github.com/reverseshells" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Post -->
+            <section class="post">
+                <header class="major">
+                    <h1>Cybersecurity Incident Report: Network Traffic</h1>
+                </header>
+
+                <p>
+                    <h2>Analysis </h2>
+                </p>
+                <p>
+                    <h2>Summary of the problem found in the DNS and ICMP traffic log</h2><br> The UDP protocol reveals that the DNS server is down or unreachable. As evident by the results of the network analysis, the ICMP echo reply returned the error message
+                    “udp port 53 unreachable,” Port 53 is commonly used for DNS protocol traffic. It is highly likely that the DNS server is not responding.
+                </p>
+                <p>
+                    <h2>Explain your analysis of the data and provide at least one cause of the incident.</h2><br> The incident occurred today at 1:23 p.m.. Customers called the organization to notify the IT team that they received the message “destination
+                    port unreachable” when they attempted to visit the website. The network security professionals within the organization are currently investigating the issue so customers can access the website again. In our investigation into the issue,
+                    we conducted packet sniffing tests using tcpdump. In the resulting log file, we found that DNS port 53 was unreachable. The next step is to identify whether the DNS server is down or traffic to port 53 is blocked by the firewall. The
+                    DNS server might be down due to a successful Denial of Service attack or a misconfiguration.
+                </p>
+            </section>
+
+        </div>
+
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

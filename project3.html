@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<!--
+    Massively by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Generic Page - Massively by HTML5 UP</title>
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css" />
+    </noscript>
+    <style>
+        .add-spacing {
+            margin-left: 10px;
+            /* Adjust the value as needed */
+        }
+        
+        .add-spacing2 {
+            margin-left: 50px;
+            /* Adjust the value as needed */
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+        </header>
+
+        <!-- Nav -->
+        <nav id="nav">
+            <ul class="links">
+                <li class="active"><a href="index.html">Projects</a></li>
+                <li class="active"><a href="project3.html">Examine alerts, logs, and rules with Suricata</a></li>
+            </ul>
+            <ul class="icons">
+                <li><a href="https://www.linkedin.com/in/dzhaner-mustafov-229364284/" class="icon brands fa-linkedin"><span class="label">Instagram</span></a></li>
+                <li><a href="https://github.com/reverseshells" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Post -->
+            <section class="post">
+                <header class="major">
+                    <h1>Phishing Incident Response and Remediation Project: Analyzing and Mitigating a Malicious Attachment in a Financial Services Environment</h1>
+                </header>
+
+                <!-- Your content goes here -->
+
+                <h2>Ticket Details</h2>
+
+                <table>
+                    <tr>
+                        <th>Ticket ID</th>
+                        <th>Alert Message</th>
+                        <th>Severity</th>
+                        <th>Details</th>
+                        <th>Ticket Status</th>
+                    </tr>
+                    <tr>
+                        <td>A-2703</td>
+                        <td>SERVER-MAIL Phishing attempt possible download of malware</td>
+                        <td>Medium</td>
+                        <td>The user may have opened a malicious email and opened attachments or clicked links.</td>
+                        <td>Escalated</td>
+                    </tr>
+                </table>
+                <p>
+                    <strong>
+                        Ticket comments 
+                    </strong><br> Upon receiving the phishing alert, I reviewed the details.Key elements considered include:<br>
+                    <strong>1.</strong> Severity: Medium<br>
+                    <strong>2.</strong>Sender Details: the sender’s email address “76tguy6hh6tgftrt7tg.su’” the name used in the email body “Clyde West,” and the sender’s name, “Def Communications.”<br>
+                    <strong>3.</strong>Message Body: Email expressing interest in the engineer role, with an attachment named "bfsvc.exe."<br>
+                    <strong>Answer the 5 W's:</strong><br>
+                    <strong>Who: </strong>The sender is Def Communications 76tguyhh6tgftrt7tg.su.<br>
+                    <strong>What: </strong>The email contains an attachment named "bfsvc.exe."<br>
+                    <strong>When: </strong>Sent on Wednesday, July 20, 2022, at 09:30:14 AM.<br>
+                    <strong>Where: </strong>Sent to hr@inergy.com.<br>
+                    <strong>Why: </strong>The email claims to be a job application but includes a password-protected attachment.<br>
+                    <strong>Evaluation Summary:</strong><br> Alert Severity: Indicates potential risk, warranting further investigation.<br> Sender Details: The sender's domain appears suspicious, potentially indicating a phishing attempt.<br> Message
+                    Body: Typical job application email but with a password-protected attachment and grammatical errors raising suspicion.<br> Attachments or Links: Attachment named "bfsvc.exe" is a red flag.<br>
+                    <strong>Phishing Playbook Steps:</strong><br>
+                    <strong>Step 3.0: </strong>Does the email contain any links or attachments?<br> Yes, the email contains an attachment named "bfsvc.exe."<br>
+                    <strong>Step 3.1: </strong> Are the links or attachments malicious?<br> Confirmed. The attachment "bfsvc.exe" has a known malicious hash. <br>
+                    <srton>Step 3.2: </srton>Update the alert ticket and escalate<br> Updating the ticket to "Escalated" due to the confirmed malicious attachment. <br>
+                </p>
+                <p>
+                    <strong>Additional information</strong><br>
+                    <strong>Known malicious file hash: </strong><br> 54e6ea47eb04634d3e87fd7787e2136ccfbcc80ade34f246a12cf93bab527f6b
+                    <br>
+                    <strong>Email:</strong><br> From: Def Communications 76tguyhh6tgftrt7tg.su 114.114.114.114<br> Sent: Wednesday, July 20, 2022 09:30:14 AM<br> To: hr@inergy.com 176.157.125.93<br> Subject: Re: Infrastructure Egnieer role<br><br> Dear
+                    HR at Ingergy,<br><br> I am writing for to express my interest in the engineer role posted from the website.<br><br> There is attached my resume and cover letter. For privacy, the file is password protected. Use the password paradise10789
+                    to open. <br><br> Thank you,<br><br> Clyde West<br> Attachment: filename="bfsvc.exe"
+                </p>
+
+            </section>
+
+        </div>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

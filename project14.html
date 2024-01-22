@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+    <title>Generic Page - Massively by HTML5 UP</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+        .add-spacing {
+            margin-left: 10px;
+            /* Adjust the value as needed */
+        }
+    </style>
+    <style>
+        .add-spacing2 {
+            margin-left: 50px;
+            /* Adjust the value as needed */
+        }
+    </style>
+</head>
+
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+        </header>
+
+        <!-- Nav -->
+        <nav id="nav">
+            <ul class="links">
+                <li class="active"><a href="thirdpage.html">Projects</a></li>
+                <li class="active"><a href="project14.html">Security Incident Report:  brute force attack</a></li>
+            </ul>
+            <ul class="icons">
+                <li><a href="https://www.linkedin.com/in/dzhaner-mustafov-229364284/" class="icon brands fa-linkedin"><span class="label">Instagram</span></a></li>
+                <li><a href="https://github.com/reverseshells" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Post -->
+            <section class="post">
+                <header class="major">
+                    <h1>Security Incident Report: brute force attack</h1>
+                </header>
+
+                <p>
+                    <h2>Scenario</h2><br> You are a cybersecurity analyst for yummyrecipesforme.com, a website that sells recipes and cookbooks. A disgruntled baker has decided to publish the website’s best-selling recipes for the public to access for free.
+                    <br> The baker executed a brute force attack to gain access to the web host. They repeatedly entered several known default passwords for the administrative account until they correctly guessed the right one. After they obtained the
+                    login credentials, they were able to access the admin panel and change the website’s source code. They embedded a javascript function in the source code that prompted visitors to download and run a file upon visiting the website. After
+                    running the downloaded file, the customers are redirected to a fake version of the website where the seller’s recipes are now available for free.<br> Several hours after the attack, multiple customers emailed yummyrecipesforme’s helpdesk.
+                    They complained that the company’s website had prompted them to download a file to update their browsers. The customers claimed that, after running the file, the address of the website changed and their personal computers began running
+                    more slowly. <br> In response to this incident, the website owner tries to log in to the admin panel but is unable to, so they reach out to the website hosting provider. You and other cybersecurity analysts are tasked with investigating
+                    this security event.<br> To address the incident, you create a sandbox environment to observe the suspicious website behavior. You run the network protocol analyzer tcpdump, then type in the URL for the website, yummyrecipesforme.com.
+                    As soon as the website loads, you are prompted to download an executable file to update your browser. You accept the download and allow the file to run. You then observe that your browser redirects you to a different URL, greatrecipesforme.com,
+                    which is designed to look like the original site. However, the recipes your company sells are now posted for free on the new website. <br> The logs show the following process:<br> ⦁ The browser requests a DNS resolution of the yummyrecipesforme.com
+                    URL.
+                    <br> ⦁ The DNS replies with the correct IP address. <br> ⦁ The browser initiates an HTTP request for the webpage.<br> ⦁ The browser initiates the download of the malware.<br> ⦁ The browser requests another DNS resolution for greatrecipesforme.com.<br>                    ⦁ The DNS server responds with the new IP address.<br> ⦁ The browser initiates an HTTP request to the new IP address.<br> A senior analyst confirms that the website was compromised. The analyst checks the source code for the website.
+                    They notice that javascript code had been added to prompt website visitors to download an executable file. Analysis of the downloaded file found a script that redirects the visitors’ browsers from yummyrecipesforme.com to greatrecipesforme.com.
+                    <br> The cybersecurity team reports that the web server was impacted by a brute force attack. The disgruntled baker was able to guess the password easily because the admin password was still set to the default password. Additionally,
+                    there were no controls in place to prevent a brute force attack. <br> Your job is to document the incident in detail, including identifying the network protocols used to establish the connection between the user and the website. You
+                    should also recommend a security action to take to prevent brute force attacks in the future.<br>
+                </p>
+                <p>
+                    <h2>Resources for the assignment</h2>
+                    <a href="https://docs.google.com/document/d/1mLq-qSedt4ZS8SSAQMWuOQ2djibob38wkUJZS3zTCrw/template/preview?resourcekey=0-yvXQeSsKts64mfpFG8Jm3Q">DNS & HTTP traffic log</a>
+                </p>
+                <p>
+                    <h2>Section 1: Identify the Network Protocol Involved in the Incident.</h2><br> The network protocols involved in the incident were DNS and HTTP<br>
+                    <strong>-DNS Protocol:</strong><br>⦁ DNS request for yummyrecipesforme.com resulted in the correct IP address (203.0.113.22).<br> ⦁ DNS request for greatrecipesforme.com resulted in the new IP address (192.0.2.17).<br>
+                    <strong>HTTP Protocol:</strong>><br>⦁ HTTP requests initiated by the browser for yummyrecipesforme.com.<br> ⦁ Download of malware occurred over HTTP from yummyrecipesforme.com.<br> ⦁ HTTP requests initiated by the browser for greatrecipesforme.com
+                    after the DNS resolution.<br>
+                </p>
+                <p>
+                    <h2>Section 2: Document the Incident</h2><br> The incident occurred when a disgruntled baker executed a brute force attack, successfully guessing the default password for the administrative account on the web host. With the obtained login
+                    credentials, the attacker accessed the admin panel, altered the website's source code, and embedded a javascript function. This function triggered the download of a malicious file upon visitors' access, redirecting them to a fraudulent
+                    website (greatrecipesforme.com).<br> Several customers reported being prompted to download a file to update their browsers after visiting yummyrecipesforme.com. Post-download, the website address changed, and their computers experienced
+                    a decrease in performance. The compromise was confirmed by a senior analyst who identified the added javascript code and analyzed the downloaded file.
+                </p>
+                <p>
+                    <h2>Sources:</h2><br> ⦁ Customer complaints to the helpdesk.<br> ⦁ Analysis of the compromised website's source code.<br> ⦁ Examination of the downloaded file.<br> ⦁ DNS & HTTP traffic logs from tcpdump.
+                </p>
+                <p>
+                    <h2>Section 3: Recommend One Remediation for Brute Force Attacks</h2><br>
+                    <strong>Recommendation: Enforce Two-Factor Authentication (2FA)</strong><br> Implementing Two-Factor Authentication is crucial to enhance the security posture and prevent brute force attacks. By requiring an additional verification
+                    step beyond passwords, 2FA adds an extra layer of defense, reducing the likelihood of unauthorized access, even with compromised passwords.<br>
+                    <strong>Reasoning:</strong><br> ⦁ Mitigates the impact of compromised passwords by requiring an additional form of authentication.<br> ⦁ Provides an added layer of security without solely relying on the strength of passwords.<br> ⦁
+                    Enhances overall security by making it significantly harder for malicious actors to gain unauthorized access.
+                </p>
+                <p>
+                    <h2>Setting firewall rules in place to filter traffic coming in and out of the network and performing firewall maintenance regularly.</h2><br> Think of your network as a house. Firewall rule's function, as the bouncer determining who gains
+                    entry and who is kept out. Routine maintenance involves inspecting locks and alarms to ensure security. It's about keeping the door locked and safeguarding the premises from online intruders
+                </p>
+            </section>
+
+        </div>
+
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

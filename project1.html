@@ -1,0 +1,167 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+    <title>Generic Page - Massively by HTML5 UP</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+        .add-spacing {
+            margin-left: 10px;
+            /* Adjust the value as needed */
+        }
+    </style>
+    <style>
+        .add-spacing2 {
+            margin-left: 50px;
+            /* Adjust the value as needed */
+        }
+    </style>
+</head>
+
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+        </header>
+
+        <!-- Nav -->
+        <nav id="nav">
+            <ul class="links">
+                <li class="active"><a href="index.html">Projects</a></li>
+                <li class="active"><a href="project1.html">Update a file through a Python algorithm</a></li>
+            </ul>
+            <ul class="icons">
+                <li><a href="https://www.linkedin.com/in/dzhaner-mustafov-229364284/" class="icon brands fa-linkedin"><span class="label">Instagram</span></a></li>
+                <li><a href="https://github.com/reverseshells" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Post -->
+            <section class="post">
+                <header class="major">
+                    <h1>Update a file through a Python algorithm</h1>
+                </header>
+
+                <p><strong>Project description:</strong></p>
+                <p>
+                    At my organization, access to restricted content is controlled with an allow list of IP addresses. The "allow_list.txt" file identifies these IP addresses. A separate remove list identifies IP addresses that should no longer have access to this content.
+                    I created an algorithm to automate updating the "allow_list.txt" file and remove these IP addresses that should no longer have access.<br><br>
+
+                    <strong>Open the file that contains the allow list:</strong><br> For the first part of the algorithm, I opened the "allow_list.txt" file. First, I assigned this file name as a string to the `import_file` variable:
+                </p>
+
+                <code>
+                    import_file = "allow_list.txt"
+                </code>
+
+                <p>
+                    Then, I used a <code>with</code> statement to open the file:
+                </p>
+
+                <code>
+                    with open(import_file, "r") as file:
+                </code>
+
+                <p>
+                    In my algorithm, the <code>with</code> statement is used with the <code>.open()</code> function in read mode to open the allow list file for the purpose of reading it. The purpose of opening the file is to allow me to access the IP
+                    addresses stored in the allow list file. The <code>with</code> keyword will help manage the resources by closing the file after exiting the <code>with</code> statement. In the code
+                    <code>with open(import_file, "r") as file:</code>, the <code>open()</code> function has two parameters. The first identifies the file to import, and then the second indicates what I want to do with the file. In this case, "r" indicates
+                    that I want to read it. The code also uses the <code>as</code> keyword to assign a variable named `file`; `file` stores the output of the <code>.open()</code> function while I work within the
+                    <code>with</code> statement.
+                </p>
+
+                <p>
+                    <strong>Read the file contents:</strong><br> In order to read the file contents, I used the <code>.read()</code> method to convert it into the string.
+                </p>
+
+                <code>with open(import_file, "r") as file:</code><br>
+
+                <code>
+                    ip_addresses = file.read()
+                </code>
+
+                <p>
+                    When using an <code>.open()</code> function that includes the argument "r" for "read," I can call the
+                    <code>.read()</code> function in the body of the <code>with</code> statement. The <code>.read()</code> method converts the file into a string and allows me to read it. I applied the <code>.read()</code> method to the
+                    <code>file</code> variable identified in the <code>with</code> statement. Then, I assigned the string output of this method to the variable <code>ip_addresses</code>.<br><br>In summary, this code reads the contents of the "allow_list.txt"
+                    file into a string format that allows me to later use the string to organize and extract data in my Python program.
+                </p>
+                <p>
+                    <strong>Convert the string into a list</strong><br>In order to remove individual IP addresses from the allow list, I needed it to be in list format. Therefore, I next used the .split() method to convert the ip_addresses string into
+                    a list:<br><br>
+                    <code>ip_addresses = ip_addresses.split()</code><br><br> The <code>.split()</code> function is called by appending it to a string variable. It works by converting the contents of a string to a list. The purpose of splitting <code>ip_addresses </code>                    into a list is to make it easier to remove IP addresses from the allow list. By default, the <code>.split()</code> function splits the text by whitespace into list elements. In this algorithm, the <code>.split()</code> function takes
+                    the data stored in the variable <code>ip_addresses</code>, which is a string of IP addresses that are each separated by a whitespace, and it converts this string into a list of IP addresses. To store this list, I reassigned it back
+                    to the variable <code>ip_addresses</code>
+                </p>
+                <p>
+                    <strong>Iterate through the remove list</strong><br> A key part of my algorithm involves iterating through the IP addresses that are elements in the <code>remove_list</code>.To do this, I incorporated a <code>for</code> loop:<br><br>
+                    <code>for element in remove_list:</code><br><br> The <code>for</code> loop in Python repeats code for a specified sequence. The overall purpose of the <code>for</code> loop in a Python algorithm like this is to apply specific code
+                    statements to all elements in a sequence. The <code>for</code> keyword starts the <code>for</code> loop. It is followed by the loop variable <code>element</code> and the keyword <code>in</code>. The keyword <code>in</code> indicates
+                    to iterate through the sequence <code>ip_addresses</code> and assign each value to the loop variable <code>element.</code>
+                </p>
+                <p>
+                    <strong>Remove IP addresses that are on the remove list</strong><br> My algorithm requires removing any IP address from the allow list, <code>ip_addresses,</code>that is also contained in <code>remove_list.</code>Because there were
+                    not any duplicates in <code>ip_addresses,</code>I was able to use the following code to do this:<br><br>
+                    <code>for element in remove_list:<br>
+                        <p class="add-spacing"><code>if element in ip_addresses:</code></p>
+                <p class="add-spacing2"><code>ip_addresses.remove(element)</code></p><br><br> First, within my <code>for</code>loop, I created a conditional that evaluated whether or not the loop variable
+                <code>element</code>was found in the <code>ip_addresses</code>list. I did this because applying <code>.remove()</code>to to elements that were not found in ip_addresses would result in an error. <br><br> Then, within that conditional,
+                I applied <code>.remove()</code>to <code>ip_addresses.</code>I passed in the loop variable <code>element</code> as the argument so that each IP address that was in the <code>remove_list</code> would be removed from <code>ip_addresses.</code>
+                </p>
+                <p>
+                    <strong>
+                        Update the file with the revised list of IP addresses 
+                    </strong><br> As a final step in my algorithm, I needed to update the allow list file with the revised list of IP addresses. To do so, I first needed to convert the list back into a string. I used the <code>.join()</code>method
+                    for this:<br><br>
+                    <code>ip_addresses = "\n".join(ip_addresses)</code><br><br> The <code>.join()</code>method combines all items in an iterable into a string. The <code>.join()</code> method is applied to a string containing characters that will separate
+                    the elements in the iterable once joined into a string. In this algorithm, I used the <code>.join()</code> method to create a string from the list <code>ip_addresses</code>so that I could pass it in as an argument to the <code>.write()</code>                    method when writing to the file "allow_list.txt". I used the string ("\n") as the separator to instruct Python to place each element on a new line. <br><br> Then, I used another <code>with</code> statement and the <code>.write()</code>method
+                    to update the file:<br><br>
+                    <code>with open(import_file, "w") as file:</code>
+                    <p class="add-spacing"><code>file.write(ip_addresses)</code></p><br><br> This time, I used a second argument of "w" with the <code>open()</code> function in my <code>with</code> statement. This argument indicates that I want to open a file to write over
+                    its contents. When using this argument "w", I can call the <code>.write()</code> function in the body of the <code>with</code>statement. The <code>.write()</code>function writes string data to a specified file and replaces any existing
+                    file content.<br> In this case I wanted to write the updated allow list as a string to the file "allow_list.txt". This way, the restricted content will no longer be accessible to any IP addresses that were removed from the allow list.
+                    To rewrite the file, I appended the <code>.write()</code> function to the file object <code>file</code>that I identified in the <code>with</code>statement. I passed in the <code>ip_addresses</code>variable as the argument to specify
+                    that the contents of the file specified in the <code>with</code>statement should be replaced with the data in this variable.
+                </p>
+                <p>
+                    <strong>
+                        Summary
+                    </strong><br> I created an algorithm that removes IP addresses identified in a <code>remove_list</code> variable from the "allow_list.txt" file of approved IP addresses. This algorithm involved opening the file,
+                    converting it to a string to be read, and then converting this string to a list stored in the variable <code>ip_addresses.</code> I then iterated through the IP addresses in <code>remove_list.</code> With each iteration, I evaluated
+                    if the element was part of the <code>ip_addresses</code> list. If it was, I applied the <code>.remove()</code>method to it to remove the element from <code>ip_addresses.</code> After this, I used the <code>.join()</code>method to convert
+                    the <code>ip_addresses</code>back into a string so that I could write over the contents of the "allow_list.txt" file with the revised list of IP addresses.
+                </p>
+
+            </section>
+
+        </div>
+
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

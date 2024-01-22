@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="en">
+
+<head>
+    <title>Generic Page - Massively by HTML5 UP</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+        .add-spacing {
+            margin-left: 10px;
+            /* Adjust the value as needed */
+        }
+    </style>
+    <style>
+        .add-spacing2 {
+            margin-left: 50px;
+            /* Adjust the value as needed */
+        }
+    </style>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+        </header>
+
+        <!-- Nav -->
+        <nav id="nav">
+            <ul class="links">
+                <li class="active"><a href="secondpage.html">Projects</a></li>
+                <li class="active"><a href="project7.html">Securing the Digital Fort: Vulnerability Assessment and Remediation Strategies for E-commerce Database Systems</a></li>
+            </ul>
+            <ul class="icons">
+                <li><a href="https://www.linkedin.com/in/dzhaner-mustafov-229364284/" class="icon brands fa-linkedin"><span class="label">Instagram</span></a></li>
+                <li><a href="https://github.com/reverseshells" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Post -->
+            <section class="post">
+                <header class="major">
+                    <h1>Vulnerability Assessment Report</h1>
+                </header>
+
+                <p>
+                    <strong>Scenario</strong><br> You are a newly hired cybersecurity analyst for an e-commerce company. The company stores information on a remote database server, since many of the employees work remotely from locations all around the
+                    world. Employees of the company regularly query, or request, data from the server to find potential customers. The database has been open to the public since the company's launch three years ago. As a cybersecurity professional, you
+                    recognize that keeping the database server open to the public is a serious vulnerability. A vulnerability assessment of the situation can help you communicate the potential risks with decision makers at the company. You must create
+                    a written report that clearly explains how the vulnerable server is a risk to business operations and how it can be secured.
+                </p>
+                <p>
+                    <strong>System Description</strong><br> The server hardware consists of a powerful CPU processor and 128GB of memory. It runs on the latest version of Linux operating system and hosts a MySQL database management system. It is configured
+                    with a stable network connection using IPv4 addresses and interacts with other servers on the network. Security measures include SSL/TLS encrypted connections.
+                </p>
+                <p>
+                    <strong>Scope</strong><br> The scope of this vulnerability assessment relates to the current access controls of the system. The assessment will cover a period of three months, from June 20XX to August 20XX. NIST SP 800-30 Rev. 1 is
+                    used to guide the risk analysis of the information system.
+                </p>
+                <p>
+                    <strong>Purpose</strong><br> This vulnerability analysis aims to evaluate the criticality of the database server to the business, emphasize the importance of securing server data, and highlight potential business impacts if the server
+                    were disabled.
+                </p>
+                <p>
+                    <strong>Risk Assessment</strong>
+                </p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Threat Source</th>
+                            <th>Threat Event</th>
+                            <th>Likelihood</th>
+                            <th>Severity</th>
+                            <th>Risk</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Hacker</td>
+                            <td>Obtain sensitive information via exfiltration</td>
+                            <td>3</td>
+                            <td>3</td>
+                            <td>9</td>
+                        </tr>
+                        <tr>
+                            <td>Employee</td>
+                            <td>Disrupt mission-critical operations</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <td>Customer</td>
+                            <td>Alter/Delete critical information</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>3</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>
+                    <strong>
+                        Approach
+                    </strong><br> The chosen threats were based on their potential to compromise critical business functions. Likelihood and severity scores were determined considering potential impacts on operations and customers.
+                    Limitations include the scope focusing solely on access controls.
+                </p>
+                <p>
+                    <strong>Remediation Strategy</strong><br> Authentication, Authorization, and Auditing Mechanisms:<br> -Implement strong passwords and enforce regular password updates.<br> -Utilize role-based access controls to limit user privileges
+                    based on job responsibilities.<br> -Introduce multi-factor authentication to add an additional layer of user verification.<br> -Implement robust auditing mechanisms to track and monitor user activities.<br><br> Encryption of Data in
+                    Motion:
+                    <br> -Upgrade from SSL to TLS for enhanced data encryption during transit.<br> -Ensure that all communication between clients and the server is encrypted using TLS protocols.<br><br> IP Allow-listing:<br> -Restrict database server
+                    access to specific IP addresses through allow-listing.<br> -Allow only corporate office IP addresses, preventing unauthorized access from the internet.<br><br> Access Controls Enhancement: Implement the principle of least privilege
+                    to restrict unnecessary access.<br> Intrusion Detection Systems: Deploy systems for early threat detection and response.<br> Regular Security Audits: Conduct frequent audits to identify and rectify vulnerabilities promptly.<br>
+                </p>
+            </section>
+
+        </div>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

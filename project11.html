@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+    <title>Generic Page - Massively by HTML5 UP</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+        .add-spacing {
+            margin-left: 10px;
+            /* Adjust the value as needed */
+        }
+    </style>
+    <style>
+        .add-spacing2 {
+            margin-left: 50px;
+            /* Adjust the value as needed */
+        }
+    </style>
+</head>
+
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+        </header>
+
+        <!-- Nav -->
+        <nav id="nav">
+            <ul class="links">
+                <li class="active"><a href="secondpage.html">Projects</a></li>
+                <li class="active"><a href="project11.html">File permissions in Linux</a></li>
+            </ul>
+            <ul class="icons">
+                <li><a href="https://www.linkedin.com/in/dzhaner-mustafov-229364284/" class="icon brands fa-linkedin"><span class="label">Instagram</span></a></li>
+                <li><a href="https://github.com/reverseshells" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Post -->
+            <section class="post">
+                <header class="major">
+                    <h1>File permissions in Linux</h1>
+                </header>
+
+                <p>
+                    <h2>Scenario</h2><br> Review the scenario below. Then, complete the step-by-step instructions. You are a security professional at a large organization. You mainly work with their research team. Part of your job is to ensure users on this
+                    team are authorized with the appropriate permissions. This helps keep the system secure. Your task is to examine existing permissions on the file system. You’ll need to determine if the permissions match the authorization that should
+                    be given. If they do not match, you’ll need to modify the permissions to authorize the appropriate users and remove any unauthorized access.
+                </p>
+                <p>
+                    <h2>Project description:</h2>
+                    In this project ensure that the proper authorization and permissions for user, group and others are set in place. Through Linux commands I examine and modify file permissions strengthening the overall security of the system.
+                </p>
+                <p>
+                    <h2>Check file and directory details and describe the permissions string:</h2>
+                    <a><img src="images/ls-la.PNG" alt="" /></a><br> In this screenshot I navigated to the projects directory (cd projects/) and checked the files permissions including the hidden files (Command to check permissions: ls –l and a for all)<br>                    Current permissions string: -rwxrwxr-x<br> -rwxrwxr-x for this file indicates that the owner has read, write, and execute permissions, the group has the same, and others have read and execute permissions.<br> d for directory<br> -
+                    for a regular file<br> r if the user has read permissions<br> - if the user lacks read permissions<br> w if the user has write permissions<br> - if the user lacks write permissions<br> x if the user has execute permissions<br> - if
+                    the user lacks execute permissions<br> First four are for the user permissions, second three are for group permissions and third are for other
+                </p>
+                <p>
+                    <h2>Change file permissions:</h2><br>
+                    <a><img src="images/chmodo-w.PNG" alt="" /></a><br> Take a look at project_k.txt other should not have write permission. Granting write permissions to everyone in a Linux directory is like leaving the front door wide open. It invites
+                    anyone to come in and potentially mess things up. Anyone can modify, delete, or add files without control. It's a security risk that opens the door to accidental or intentional damage. Keeping write permissions limited ensures that
+                    only authorized users make changes, preventing potential chaos.
+                </p>
+                <p>
+                    <h2>Change file permissions on a hidden file:</h2><br>
+                    <a><img src="images/reedonly.PNG" alt="" /></a><br> The research team has archived <strong>.project_x.txt</strong>, which is why it’s a hidden file. This file should not have write permissions for anyone, but the user and group should
+                    be able to read the file.
+                </p>
+                <p>
+                    <h2>Change directory permissions:</h2><br>
+                    <a><img src="images/directory.PNG" alt="" /></a><br>
+                </p>
+            </section>
+
+        </div>
+
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

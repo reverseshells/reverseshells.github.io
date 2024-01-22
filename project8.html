@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+    <title>Generic Page - Massively by HTML5 UP</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+        .add-spacing {
+            margin-left: 10px;
+            /* Adjust the value as needed */
+        }
+    </style>
+    <style>
+        .add-spacing2 {
+            margin-left: 50px;
+            /* Adjust the value as needed */
+        }
+    </style>
+</head>
+
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+        </header>
+
+        <!-- Nav -->
+        <nav id="nav">
+            <ul class="links">
+                <li class="active"><a href="secondpage.html">Projects</a></li>
+                <li class="active"><a href="project8.html">Hashing and File Comparison Report</a></li>
+            </ul>
+            <ul class="icons">
+                <li><a href="https://www.linkedin.com/in/dzhaner-mustafov-229364284/" class="icon brands fa-linkedin"><span class="label">Instagram</span></a></li>
+                <li><a href="https://github.com/reverseshells" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Post -->
+            <section class="post">
+                <header class="major">
+                    <h1>Hashing and File Comparison Report</h1>
+                </header>
+
+                <p>
+                    <strong>Introduction</strong><br> As a security analyst, ensuring data integrity is paramount. In this lab, we delved into the manual generation and comparison of hash values to identify differences between two files—file1.txt and
+                    file2.txt.
+                </p>
+                <p>
+                    <h2>Task 1: Generating Hashes</h2><br> We initiated by displaying the contents of both files and then leveraged the sha256sum command to compute hash values for each file. Although the file contents appeared identical with the 'cat' command,
+                    hashing revealed potential differences.
+                    <strong>Results:</strong><br> ⦁ Hash for file1.txt: <br> 131f95c51cc819465fa1797f6ccacf9d494aaaff46fa3eac73ae63ffbdfd8267
+                    <br> ⦁ Hash for file2.txt: <br> 2558ba9a4cad1e69804ce03aa2a029526179a91a5e38cb723320e83af9ca017b
+                    <br>
+                    <h2>Task 2: Comparing Hashes</h2><br> To discern differences, we wrote the hash values to separate files—file1hash and file2hash. Subsequently, using the cmp command, we pinpointed the precise byte and line where the hash values diverged.<br>
+                    <strong>Results:</strong><br> ⦁ Differences detected at char1, line 1<br>
+                    <a><img src="images/hash.jpg" alt="" /></a>
+                </p>
+            </section>
+
+        </div>
+
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

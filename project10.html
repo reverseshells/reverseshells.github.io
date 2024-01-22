@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+    <title>Generic Page - Massively by HTML5 UP</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+        .add-spacing {
+            margin-left: 10px;
+            /* Adjust the value as needed */
+        }
+    </style>
+    <style>
+        .add-spacing2 {
+            margin-left: 50px;
+            /* Adjust the value as needed */
+        }
+    </style>
+</head>
+
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+        </header>
+
+        <!-- Nav -->
+        <nav id="nav">
+            <ul class="links">
+                <li class="active"><a href="secondpage.html">Projects</a></li>
+                <li class="active"><a href="project10.html">Security Investigation and Enhancement through SQL Queries</a></li>
+            </ul>
+            <ul class="icons">
+                <li><a href="https://www.linkedin.com/in/dzhaner-mustafov-229364284/" class="icon brands fa-linkedin"><span class="label">Instagram</span></a></li>
+                <li><a href="https://github.com/reverseshells" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Post -->
+            <section class="post">
+                <header class="major">
+                    <h1>Security Investigation and Enhancement through SQL Queries</h1>
+                </header>
+
+                <p>
+                    <h2>Apply filters to SQL queries</h2>
+                </p>
+                <p>
+                    <h2>Project description</h2><br> I'm using SQL queries to dig into potential security issues tied to login attempts and employee machines in a big organization. By delving into the 'log_in_attempts' and 'employees' tables, I'm pinpointing
+                    and fixing security concerns to keep the system safe. These SQL queries help me filter and extract specific data, letting me investigate failed logins, suspicious events, and gather employee details based on different criteria. This
+                    project demonstrates how SQL can be a powerful tool in bolstering cybersecurity efforts.
+                </p>
+                <p>
+                    <h2>Retrieve after hours failed login attempts:</h2><br> In this query, I used the SQL statement:<br>
+                    <strong>SELECT * FROM log_in_attempts WHERE login_time > '18:00' AND success = 0;</strong><br>
+                    <a><img src="images/sql1800.jpg" alt="" /></a><br> This query retrieves records from the 'log_in_attempts' table where the login attempts occurred after 18:00 and were unsuccessful (indicated by a 'success' value of 0 or FALSE). The result
+                    shows 19 instances of failed logins after business hours, including details such as username, date, time, country, IP address, and success status. This information helps identify potential security incidents outside normal working
+                    hours.
+                </p>
+                <p>
+                    <h2>Retrieve login attempts on specific dates:</h2><br>
+                    <strong>Task: </strong>You recently detected a suspicious event on 2022-05-09 and need to investigate login attempts on that day and the preceding day. Use SQL filters to create a query that identifies all login attempts occurring
+                    on 2022-05-09 or 2022-05-08 from the log_in_attempts table<br>
+                    <a><img src="images/dateSQl.jpg" alt="" /></a><br>
+                    <a><img src="images/dateSQL2.jpg" alt="" /></a><br>
+                    <strong>SELECT * FROM log_in_attempts WHERE login_date = '2022-05-09' OR login_date = '2022-05-08';</strong><br> This query retrieves records where the login attempts fall on either 2022-05-09 or 2022-05-08. The OR operator combines
+                    the conditions, providing a comprehensive view of login activities on the specified dates.
+                </p>
+                <p>
+                    <h2>Retrieve login attempts outside of Mexico:</h2><br>
+                    <a><img src="images/likemex.jpg" alt="" /></a><br>
+                    <a><img src="images/like2.PNG" alt="" /></a><br>
+                    <a><img src="images/like3.PNG" alt="" /></a><br>
+                    <strong>SELECT *</strong><br>
+                    <strong>FROM log_in_attempts</strong><br>
+                    <strong>WHERE country NOT LIKE 'MEX%';</strong><br> This query will give you a list of login attempts that occurred outside of Mexico, excluding both 'MEX' and 'MEXICO' entries in the country column.<br>
+                </p>
+                <p>
+                    <h2>Retrieve employees in Marketing:</h2>
+                    <strong>Task: </strong>Your team wants to perform security updates on specific employee machines in the Marketing department. You’re responsible for getting information on these employee machines and will need to query the <strong>employees </strong>table.
+                    Use filters in SQL to create a query that identifies all employees in the Marketing department for all offices in the East building.<br>
+                    <a><img src="images/markeast.PNG" alt="" /></a>
+                </p>
+                <p>
+                    <h2>Retrieve employees in Finance or Sales:</h2>
+                    <a><img src="images/in.PNG" alt="" /></a><br>
+                    <a><img src="images/in2.PNG" alt="" /></a><br> The SELECT * statement retrieves all columns from the employees table for the matching rows.<br> The FROM employees specifies the table from which the data is retrieved.<br> The WHERE clause
+                    is used to filter the rows. The condition department IN ('Sales', 'Finance') ensures that only rows where the department is either 'Sales' or 'Finance' are selected.<br> This query will give you a list of employees who work in either
+                    the Sales or Finance departments.
+                </p>
+                <p>
+                    <h2>Retrieve all employees not in IT:</h2>
+                    <a><img src="images/sql.PNG" alt="" /></a><br> The SELECT * statement retrieves all columns from the employees table for the matching rows.<br> The FROM employees specifies the table from which the data is retrieved.<br> The WHERE clause
+                    is used to filter the rows. The condition department 'Information Technology' ensures that only rows where the department is not 'Information Technology' are selected.<br> This query will give you a list of employees who are not in
+                    the IT department.<br>
+                </p>
+            </section>
+
+        </div>
+
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
