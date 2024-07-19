@@ -1,0 +1,256 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+    <title>Generic Page - Massively by HTML5 UP</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+        .add-spacing {
+            margin-left: 10px;
+            /* Adjust the value as needed */
+        }
+        
+        .add-spacing2 {
+            margin-left: 50px;
+            /* Adjust the value as needed */
+        }
+        
+        .responsive-img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .collapsible {
+            background-color: #777;
+            color: white;
+            cursor: pointer;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+        }
+        
+        .active,
+        .collapsible:hover {
+            background-color: #555;
+        }
+        
+        .content {
+            padding: 0 10px;
+            display: none;
+            overflow: hidden;
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+        </header>
+
+        <!-- Nav -->
+        <nav id="nav">
+            <ul class="links">
+                <li class="active"><a href="index.html">Projects</a></li>
+                <li class="active"><a href="SIEM_with_honeypot.html">SIEM</a></li>
+            </ul>
+            <ul class="icons">
+                <li><a href="https://www.linkedin.com/in/dzhaner-mustafov-229364284/" class="icon brands fa-linkedin"><span class="label">Instagram</span></a></li>
+                <li><a href="https://github.com/reverseshells" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Post -->
+            <section class="post">
+                <header class="major">
+                    <h1>SIEM solution that records RDP login attempts and creates a heatmap.</h1>
+                </header>
+                <p><strong>Project description:</strong></p>
+                <p>I will create a Security Information and Event Management (SIEM) system in the cloud, alongside a virtual machine (VM) that will act as a honeypot. The VM will be deliberately configured to be highly vulnerable, allowing it to attract
+                    and log attacks from various IP addresses and countries worldwide. This data will be displayed on a map, highlighting the geographic origins of the attacks. The focus will be on failed Remote Desktop Protocol (RDP) login attempts.
+                    <br></p>
+                <p><b> Steps </b></p><br>
+                <p>
+                    1. Create an Azure Subscription: Set up an Azure subscription to host all the necessary resources.<br> 2. Create a Virtual Machine in Azure: Deploy a VM in Azure.<br> 3. Configure the Virtual Machine: <br> - Disable both the VM and
+                    Windows firewalls to expose it fully to the internet. <br> - This exposure will make the VM an attractive target for attackers, encouraging rapid discovery. <br> 4. Set Up Log Analytics Workspace: <br> - Create a Log Analytics Workspace
+                    in Azure to collect and ingest logs from the virtual machine. <br> 5. Set Up Azure Sentinel: <br> - Implement Azure Sentinel to create a visual map displaying the attack data, indicating the countries of origin. <br> 6. Transform and
+                    Enrich Logs: <br> - Use PowerShell scripts to extract IP addresses from the Windows event logs. <br> - Send these IP addresses to a third-party API to obtain geographic data such as latitude, longitude, country, state, and province.
+                    <br> - Create custom logs in the VM incorporating this enriched geographic data. <br> By following these steps, I aim to provide a clear visualization of the global distribution of failed RDP login attempts, helping to identify potential
+                    threats. <br> I have created an Azure subscription account, as you can see in the picture below. <br>
+                </p>
+                <a><img src="images/S1Capture.PNG" alt="" class="responsive-img" /></a><br>
+                <p>In the picture, you can see an arrow pointing to the search bar. I will create a VM by searching for "Virtual Machines". </p><br>
+                <a><img src="images/S2.PNG" alt="" class="responsive-img" /></a><br>
+                <a><img src="images/S3.PNG" alt="" class="responsive-img" /></a><br>
+                <p>If you follow the steps above, you will see this screen. I will create a new resource group (a logical grouping of resources in Azure that usually share the same lifespan). I will name this resource group "Honeypot". <br></p>
+                <a><img src="images/S5.PNG" alt="" class="responsive-img" /></a><br>
+                <p>I named my VM "honeypot-vm", changed the security type to Standard, and selected the Windows 10 Pro image. </p>
+                <a><img src="images/S6Capture.PNG" alt="" class="responsive-img" /></a><br>
+                <p>Fill out the username and password fields. </p>
+                <a><img src="images/S7Capture.PNG" alt="" class="responsive-img" /></a><br>
+                <p>Check the box. <br></p>
+                <a><img src="images/S8Capture.PNG" alt="" class="responsive-img" /></a><br>
+                <p>Click next until we get to networking. <br> Then I chose advanced on NIC (this is like a firewall). <br></p>
+                <a><img src="images/S9Capture.PNG" alt="" class="responsive-img" /></a><br>
+                <p>I will create new. <br></p>
+                <a><img src="images/S10Capture.PNG" alt="" class="responsive-img" /></a><br>
+                <p>I deleted this rule. <br></p>
+                <a><img src="images/S11Capture.PNG" alt="" class="responsive-img" /></a><br>
+                <p>This is the rule i created which will allow all traffic. <br></p>
+                <p>Now my VM is deployed and complete. <br></p>
+                <a><img src="images/S12Capture.PNG" alt="" class="responsive-img" /></a><br>
+                <p>Next, I will add a Log Analytics Workspace<br></p>
+                <a><img src="images/S13Capture.PNG" alt="" class="responsive-img" /></a><br>
+                <p>I will add it to the "Honeypot" resource group I previously created.<br></p>
+                <a><img src="images/S14Capture.PNG" alt="" class="responsive-img" /></a><br>
+                <p>I named it "log-A-W-honeypot" for Log Analytics Workspace Honeypot. <br></p>
+                <a><img src="images/S15Capture.PNG" alt="" class="responsive-img" /></a><br>
+                <a><img src="images/S16Capture.PNG" alt="" class="responsive-img" /></a><br>
+                <p>I was originally thinking of using Security Center, but I was shocked when nothing showed up, as you can see in the picture below. <br></p>
+                <a><img src="images/S17Capture.PNG" alt="" class="responsive-img" /></a><br>
+                <p>Apparently, other people have experienced the same issue, but the provided answers, even from the staff, were not helpful. I stumbled across Microsoft Defender for Cloud, which is the upgraded and renamed Azure Security Center. From what
+                    I understand, it offers the same features and more. In the image below, you can see a side-by-side comparison. <br><br></p>
+                <a><img src="images/S18Capture.PNG" alt="" class="responsive-img" /></a><br>
+                <p>The first thing I changed was the Defender plans. Click on "Environment settings".<br></p>
+                <a><img src="images/S19Capture.PNG" alt="" class="responsive-img" /></a><br>
+                <a><img src="images/S19.1Capture.PNG" alt="" class="responsive-img" /></a><br>
+                <p>I enabled the services option. </p>
+                <a><img src="images/S20Capture.PNG" alt="" class="responsive-img" /></a><br>
+                <p>Next, I will go to Log Analytics Workspaces and click on "log-A-W-honeypot," which I created earlier. <br></p>
+                <a><img src="images/S21Capture.PNG" alt="" class="responsive-img" /></a><br>
+                <a><img src="images/S22Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>Connect. <br></p>
+                <a><img src="images/S23Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>I was planning to use Azure Sentinel, but I faced the same issue as before. It appears they really changed the name and somewhat altered the interface. Anyway, I am going to use Microsoft Sentinel. The image below shows a side-by-side
+                    comparison. <br></p>
+                <a><img src="images/S24Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>I created a new workspace and connected it to "log-A-W-honeypot". <br></p>
+                <a><img src="images/S25Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>My VM is set up, so I will try to log in to it. <br></p>
+                <a><img src="images/S26Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>I opened the Remote Desktop Connection and entered my public IP address. </p>
+                <a><img src="images/S27Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <a><img src="images/S28Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <a><img src="images/S29Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>I opened Microsoft Edge and completed the initial setup. Then, I opened Event Viewer from the Windows search bar. I will mainly focus on Event ID 4625, which indicates a failed logon attempt. <br></p>
+                <a><img src="images/S30Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>So basically, I will be gathering and collecting all these failed login attempts through RDP. Let's examine what is inside these packets. You can see the Account Name, which will be the username that the person tried to use to log in.
+                    Additionally, there's the Failure Reason, Workstation Name (the workstation from which the attacker tried to log in), and the Source Network Address, which is the IP address from where the attacker attempted to log in to the VM and
+                    failed. It will look something like the pictures below. <br></p>
+                <a><img src="images/S31Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <a><img src="images/S32Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>Then, essentially, we're going to feed this information to https://ipgeolocation.io/ and pinpoint their geolocation. <br></p>
+                <a><img src="images/S33Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>After that, I am going to use this information to create a custom log, which I will then send to Log Analytics Workspace in Azure. Following this, I will use Sentinel, the SIEM, to interpret the latitude and longitude or the country, and
+                    then plot out the different attackers on the map. <br></p>
+                <p>First, I want to make sure to turn off the firewall so it can respond to ICMP echo requests. This will make it more susceptible to being discovered on the internet faster. <br></p>
+                <a><img src="images/S34Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>As you can see, right now, it times me out. <br></p>
+                <p>I forgot to mention, if you want, you can enable ICMP. However, since this is a honeypot, I don't mind if I disable the firewall altogether. <br></p>
+                <a><img src="images/S35Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <a><img src="images/S36Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <a><img src="images/S37Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>I repeated the same process for both the private and public profiles.
+                </p>
+                <a><img src="images/S38Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>Now my pings are being returned.<br> I created an account on https://ipgeolocation.io/, obtained my API key, and tried to write a script with the help of the internet.<br> Actually, I found a better script on GitHub.<br> Now, it runs through
+                    the event logs we viewed earlier and creates a file with geodata on the failed logon log file.<br> </p>
+                <a><img src="images/S39Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <a><img src="images/S40Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <!-- Collapsible Sections -->
+                <button type="button" class="collapsible">ERRORS I FACED </button>
+                <div class="content">
+                    <p>As you can see, I had way too many requests. I waited to collect some of them to investigate, but when I came back, there was a session error. I tried restarting the VM, troubleshooting, disconnecting and reconnecting the VM, and restarting
+                        my physical machine, but I still can't connect. <br><br> So I kind of fixed it; the problem was with the display resolution. However, the machine is still really slow for some reason. Next, I will need to address that before continuing
+                        with the project's main goal. <br><br>
+                    </p>
+                    <a><img src="images/S41Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                    <p>Interestingly, it now loads and runs for a bit, but extremely slowly, and then gives me the same error. </p>
+                    <p>So, it finally loaded long enough to give me a more insightful error. Apparently, I should have used my own code instead of the one I found and used. The code might have been good, but errors happen in this industry. I am getting closer
+                        to fixing it step by step. Regarding the resolution, I am pretty sure it wasn't a factor, but it was wrong, so it's better to fix it just to be sure. <br></p>
+                    <a><img src="images/S42Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                    <p>I clicked "No," but I still got the same initial error. At this point, it might be better to wipe and restart the VM honeypot since it doesn't contain anything valuable. However, since I am just practicing, I want to explore this issue
+                        a little more. <br></p>
+                    <p>I found a blog from 2022, so it's two years old, where people faced the same or similar problems. Unfortunately, it didn't help me, but it was interesting to see what others have encountered. Unfortunately, most of them didn't have
+                        fixes, and the ones that did didn't help me. Here is the blog if you are interested: https://serverfault.com/questions/1090540/windows-server-2022-rdp-connection-fails-with-error-0x3-extended-error-0x11. <br></p>
+                    <p>So basically, at this point, I am just collecting errors. <br><br> But it's a good learning process. <br></p>
+                    <a><img src="images/S43Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                    <a><img src="images/S44Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                    <p><b>Code: 0xC000012D STATUS_COMMITMENT_LIMIT {Out of Virtual Memory} Your system is low on virtual memory. </b></p>
+                    <a><img src="images/S45Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                    <a><img src="images/S46Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                    <p>I will reset the primary NIC in PowerShell because Boot Diagnostics found an error there. </p><br>
+                    <a><img src="images/S47Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                    <p>I forgot to take a screenshot, but previously, where it said "VM running," there was an X. <br></p>
+                    <a><img src="images/S48Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                    <p>This time, it ran a bit longer and better, but I still couldn't do anything on the machine before it crashed with the same error. <br><br> A new error to explore! This has been a great journey; I learned about various errors through
+                        blogs and posts. Here I have the opportunity to learn a few more. It may sound weird, but I actually appreciate facing these errors because, through this experience, I've had the chance to read so many great posts and learn. <br></p>
+                    <a><img src="images/S49Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                </div>
+                <p>I redid the steps, and again, there is the traffic I am receiving. <br></p>
+                <a><img src="images/S50Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>I am getting so many requests from a brute force attack in Iran. It's fascinating that they all come from a single IP.<br> I transferred the log file material to my physical PC and created a new custom log.<br> It has changed from what
+                    I watched, and there isn't much information online. Apparently, there are no more custom log fields and advanced settings. Custom logs are created from the left side under "Settings" and "Tables." After that, I added Monitoring Data
+                    Collection Endpoints and Data Collection Rules. </p>
+                <a><img src="images/S51Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <a><img src="images/S52Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>I wanted to do this right, so I studied KQL (Kusto Query Language) through YouTube and a course recommended by Azure on this website<br><br></p>
+                <li><a href="https://www.pluralsight.com/courses/kusto-query-language-kql-from-scratch" class="button">https://www.pluralsight.com/courses/kusto-query-language-kql-from-scratch</a></li><br><br>
+                <p>Here's the refined text:<br> I created code that generates the custom fields I needed using the `extend` and `extract` functions. <br> I saved my code as a function and named it `FAILED_RDP_GEO`. <br> </p>
+                <a><img src="images/S54Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>I am almost done. I created everything, but for some reason, my map is invisible. <br></p>
+                <a><img src="images/S55Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>I made a few changes to my browser's color settings, and the map is now displaying correctly. <br></p>
+                <a><img src="images/S56Capture.png" alt="" class="responsive-img" /></a><br><br>
+                <a><img src="images/S57Capture.gif" alt="" class="responsive-img" /></a><br><br>
+
+
+            </section>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var coll = document.getElementsByClassName("collapsible");
+            for (var i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.display === "block") {
+                        content.style.display = "none";
+                    } else {
+                        content.style.display = "block";
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

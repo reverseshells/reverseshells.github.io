@@ -1,0 +1,213 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+    <title>Generic Page - Massively by HTML5 UP</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+        .add-spacing {
+            margin-left: 10px;
+            /* Adjust the value as needed */
+        }
+        
+        .add-spacing2 {
+            margin-left: 50px;
+            /* Adjust the value as needed */
+        }
+        
+        .responsive-img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .collapsible {
+            background-color: #777;
+            color: white;
+            cursor: pointer;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+        }
+        
+        .active,
+        .collapsible:hover {
+            background-color: #555;
+        }
+        
+        .content {
+            padding: 0 10px;
+            display: none;
+            overflow: hidden;
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+        </header>
+
+        <!-- Nav -->
+        <nav id="nav">
+            <ul class="links">
+                <li class="active"><a href="index.html">Projects</a></li>
+                <li class="active"><a href="cloud_company_network.html">cloud company network</a></li>
+            </ul>
+            <ul class="icons">
+                <li><a href="https://www.linkedin.com/in/dzhaner-mustafov-229364284/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                <li><a href="https://github.com/reverseshells" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Post -->
+            <section class="post">
+                <header class="major">
+                    <h1>cloud company network</h1>
+                </header>
+                <p><strong>Project description:</strong></p>
+                <p>In this project, I will create a realistic cloud company network with separate network segments for internal, DMZ, and management purposes, basic security configurations, and essential services hosted on servers. Since there are no other
+                    projects like this, or at least I couldn't find any to compare mine to, I don't know how accurate it will be, but I will try my best. <br></p>
+                <p><b>Step 1: I started Cisco Packet Tracer and created a new project. <br>
+
+                    Step 2: I will add Network Devices </b></p><br>
+                <p>1. I will add two routers (e.g., 2911) to the workspace. One will act as the edge router, and the other as the internal router. <br></p>
+                <a><img src="images/CC1Capture.PNG" alt="" class="responsive-img" /></a><br>
+                <p>2. I added three switches (e.g., 2960) to the workspace: one for the internal network, one for the DMZ (Demilitarized Zone), and one for the management network. <br></p>
+                <a><img src="images/CC2Capture.PNG" alt="" class="responsive-img" /></a><br>
+                <p>3. Three servers for web, email, and FTP services. <br></p>
+                <a><img src="images/CC3Capture.PNG" alt="" class="responsive-img" /></a><br>
+                <p>4. For end devices, I dragged and dropped several PCs onto the workspace to simulate employee workstations. <br></p>
+                <a><img src="images/CC4Capture.PNG" alt="" class="responsive-img" /></a><br>
+                <p>5. Lastly, I added a Cloud onto the workspace. <br></p>
+                <a><img src="images/CC5Capture.PNG" alt="" class="responsive-img" /></a><br>
+                <p><b> Now I will connect the devices.</b></p>
+                <a><img src="images/CC6Capture.PNG" alt="" class="responsive-img" /></a><br>
+                <p>1. Edge Router Gig0/0 to the Cloud ethernet6.<br> 2. Edge Router Gig0/1 to the DMZ Switch Gig0/1. <br> 3. Internal Router Gig0/1 to the Internal network Gig0/1. <br> For the connections below, I used available Fast Ethernet cables: <br>                    4. Internal network to the Management network. <br> 5. Servers to the DMZ Switch. <br> 6. PCs to the Internal Switch. <br> And Edge Router Gig0/2 to the Internal Router Gig0/2. <br></p>
+                <p>I have turned the port status on for the routers. <br></p>
+                <a><img src="images/CC7Capture.PNG" alt="" class="responsive-img" /></a><br>
+                <a><img src="images/CC8Capture.PNG" alt="" class="responsive-img" /></a><br>
+                <p><b> I will configure IP addressing.</b></p><br>
+                <p><strong>Edge Router: </strong></p><br>
+                <p>I opened the <strong>CLI</strong> tab. </p>
+                <a><img src="images/CC9Capture.PNG" alt="" class="responsive-img" /></a><br>
+                <p>I am going to enter configuration mode. <br></p>
+                <a><img src="images/CC10Capture.PNG" alt="" class="responsive-img" /></a><br>
+                <a><img src="images/CC11Capture.PNG" alt="" class="responsive-img" /></a><br>
+                <p>And assign IP addresses to interfaces: <br></p>
+                <a><img src="images/CC12Capture.PNG" alt="" class="responsive-img" /></a><br>
+                <a><img src="images/CC13Capture.PNG" alt="" class="responsive-img" /></a><br>
+                <a><img src="images/CC14Capture.PNG" alt="" class="responsive-img" /></a><br>
+                <a><img src="images/CC15Capture.PNG" alt="" class="responsive-img" /></a><br>
+                <p><b>Internal Router:</b></p>
+                <a><img src="images/CC16Capture.PNG" alt="" class="responsive-img" /></a><br>
+                <a><img src="images/CC17Capture.PNG" alt="" class="responsive-img" /></a><br>
+                <a><img src="images/CC18Capture.PNG" alt="" class="responsive-img" /></a><br>
+                <a><img src="images/CC19Capture.PNG" alt="" class="responsive-img" /></a><br>
+                <p>I edited the edge router. <br></p>
+                <a><img src="images/CC20Capture.PNG" alt="" class="responsive-img" /></a><br>
+                <p><b>Servers (DMZ): </b></p>
+                <a><img src="images/CC21Capture.PNG" alt="" class="responsive-img" /></a><br>
+                <a><img src="images/CC22Capture.PNG" alt="" class="responsive-img" /></a><br>
+                <a><img src="images/CC23Capture.PNG" alt="" class="responsive-img" /></a><br>
+                <p>I tested the connections by having the servers ping each other.<br></p>
+                <a><img src="images/CC25Capture.PNG" alt="" class="responsive-img" /></a><br>
+                <p><b>PCs (Internal Network):</b></p>
+                <a><img src="images/CC24Capture.PNG" alt="" class="responsive-img" /></a><br>
+                <p>I did the same with the PCs as I did with the servers; the only difference is I connected them to the internal router.<br></p>
+                <a><img src="images/CC26Capture.PNG" alt="" class="responsive-img" /></a><br>
+                <p>I tested the connection the same way. </p><br>
+                <a><img src="images/CC27Capture.PNG" alt="" class="responsive-img" /></a><br>
+                <p><b>Management Network:</b></p><br>
+                <p>I made PC0 the management PC and assigned it a static IP address (e.g., 192.168.3.10). <br></p>
+                <a><img src="images/CC28Capture.PNG" alt="" class="responsive-img" /></a><br>
+                <p><b> I will configure the routers.<br></b></p>
+                <p>1. Once again, I will start with the Edge Router. </p><br>
+                <p>I will start by configuring NAT: <br></p>
+                <a><img src="images/CC29Capture.PNG" alt="" class="responsive-img" /></a><br>
+                <p>Now let's configure a default route: </p>
+                <a><img src="images/CC30Capture.PNG" alt="" class="responsive-img" /></a><br>
+                <p>2. Internal Router </p><br>
+                <p>I will configure static routes. <br></p>
+                <a><img src="images/CC31Capture.PNG" alt="" class="responsive-img" /></a><br>
+                <p><b>Configure Switches.</b></p><br>
+                <p>1. Create VLANs <br></p>
+                <a><img src="images/CC32Capture.PNG" alt="" class="responsive-img" /></a><br>
+                <p>Assign ports to VLANs <br></p>
+                <a><img src="images/CC33Capture.PNG" alt="" class="responsive-img" /></a><br>
+                <a><img src="images/CC34Capture.PNG" alt="" class="responsive-img" /></a><br>
+                <p>I assigned VLAN 20 (DMZ) to the interface range fa0/25 - 48. </p><br>
+                <p><b>Configure Services on Servers<br></b></p>
+                <p>1. Web Server: </p><br>
+                <a><img src="images/CC35Capture.PNG" alt="" class="responsive-img" /></a><br>
+                <p>2.Email Server: <br></p>
+                <a><img src="images/CC36Capture.PNG" alt="" class="responsive-img" /></a><br>
+                <p>3. FTP Server: </p><br>
+                <a><img src="images/CC37Capture.PNG" alt="" class="responsive-img" /></a><br>
+                <p>I enable <strong>FTP</strong> services and set up credentials.</p><br>
+                <p><b>Configure Security Settings</b></p>
+                <p>I will configure Access Control Lists (ACLs) on the Edge Router. </p>
+                <a><img src="images/CC38Capture.PNG" alt="" class="responsive-img" /></a><br>
+                <p><b>Save and Document </b></p>
+                <!-- Collapsible Sections -->
+                <button type="button" class="collapsible">Sample IP Addressing Scheme </button>
+                <div class="content">
+                    <p><b>Edge Router (R1): </b><br> <code>Gig0/0 (To Cloud): 203.0.113.1/30 </code><br> <code>Gig0/1 (To DMZ Switch): 192.168.1.1/24 </code><br> <code>Gig0/2 (To Internal Router): 10.0.0.1/30 </code><br>
+                        <b>Internal Router (R2): </b><br> <code>Gig0/2 (To Edge Router): 10.0.0.2/30 </code><br> <code>Gig0/0 (To Internal Switch): </code><br> <b>Before I save it, I will structure it better. </b><br>
+                    </p>
+                    <a><img src="images/CC39Capture.PNG" alt="" class="responsive-img" /></a><br>
+                    <a><img src="images/CC40Capture.PNG" alt="" class="responsive-img" /></a><br>
+                    <p>I don't have other projects because this was hosted on a virtual machine that I used only for this project, but I will transfer it to my PC. Thanks for checking it out. If you have feedback, please contact me on LinkedIn.</p>
+                </div>
+
+
+
+            </section>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var coll = document.getElementsByClassName("collapsible");
+            for (var i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.display === "block") {
+                        content.style.display = "none";
+                    } else {
+                        content.style.display = "block";
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

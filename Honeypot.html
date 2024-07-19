@@ -1,0 +1,194 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+    <title>Generic Page - Massively by HTML5 UP</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+        .add-spacing {
+            margin-left: 10px;
+            /* Adjust the value as needed */
+        }
+        
+        .add-spacing2 {
+            margin-left: 50px;
+            /* Adjust the value as needed */
+        }
+        
+        .responsive-img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+        </header>
+
+        <!-- Nav -->
+        <nav id="nav">
+            <ul class="links">
+                <li class="active"><a href="index.html">Projects</a></li>
+                <li class="active"><a href="Honeypot.html">SSH Honeypot with Python</a></li>
+            </ul>
+            <ul class="icons">
+                <li><a href="https://www.linkedin.com/in/dzhaner-mustafov-229364284/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                <li><a href="https://github.com/reverseshells" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Post -->
+            <section class="post">
+                <header class="major">
+                    <h1>SSH Honeypot with Python</h1>
+                </header>
+                <p><strong>Project description:</strong></p>
+                <p>
+                    In this project, I will host a Google Cloud VM and create an SSH honeypot with Python on it.<br><br>
+                </p>
+                <p><strong>Google Cloud VM:</strong></p><br>
+                <p>
+                    I have created my account. Now I will create my VM.<br>
+                </p>
+                <a><img src="images/H1Capture.PNG" alt="" class="responsive-img" /></a><br>
+                <a><img src="images/H2Capture .PNG" alt="" class="responsive-img" /></a><br>
+                <a><img src="images/H3Capture .PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>I made a few changes to allocate more resources and set up the boot options.<br></p><br>
+                <a><img src="images/H4Capture .PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>I have created my VM. <br></p><br>
+                <a><img src="images/H5Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>I set the username and password. <br></p><br>
+                <a><img src="images/H6Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>I successfully connected. </p><br>
+                <a><img src="images/H7Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>I added more disk space, but it is not showing. </p><br><br>
+                <a><img src="images/H8Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>The disk is available. I will allocate it and proceed with the Python installation.<br><br></p>
+                <a><img src="images/H9Capture.PNG" alt="" class="responsive-img" /></a><br>
+                <a><img src="images/H10Capture .PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>I don't have any version of Python pre-installed, so I will install the latest version, as well as Visual Studio Code. <br></p>
+                <a><img src="images/H11Capture.PNG" alt="" class="responsive-img" /></a><br>
+                <a><img src="images/H12Capture.PNG" alt="" class="responsive-img" /></a><br>
+                <a><img src="images/H13Capture.PNG" alt="" class="responsive-img" /></a><br>
+                <a><img src="images/H14Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>I checked the 'Prohibit User Installs' and ensured it is set to 'Not Configured' or 'Disabled', so this is not the problem. I will check the Local Security Policy. </p><br><br>
+                <a><img src="images/H15Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>The Local Security Policy is also not the problem.<br></p><br>
+                <a><img src="images/H16Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>I temporarily disabled the antivirus/firewall. <br><br></p>
+                <a><img src="images/H17Capture.PNG" alt="" class="responsive-img" /></a><br>
+                <a><img src="images/H18Capture.PNG" alt="" class="responsive-img" /></a><br>
+                <a><img src="images/H19Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>I still got the same error. <br> I ran the installation process through PowerShell, and it finally worked. <br><br>
+                </p>
+                <a><img src="images/H20Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>Now it is time to download and set up Visual Studio. <br></p>
+                <a><img src="images/H21Capture.PNG" alt="" class="responsive-img" /></a><br>
+                <a><img src="images/H22Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>I tested if it is working with a simple print command. <br></p>
+                <a><img src="images/H23Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>First, let's add the shebang. <br></p>
+                <a><img src="images/H24Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>
+                    As a good practice, I will add a main function. <br> I will start building the SSH server from scratch. First, I am going to set up a server socket. <br>I am going to need to import the server socket library. <br> I will add <code>socket.AF_INET</code>                    to specify that I want it to be an IP-based socket. Then, I will add <code>socket.SOCK_STREAM</code> to indicate that I want a TCP socket. So now, I have a IP TCP socket. <br> Another thing I need to do is use <code>setsockopt</code>                    with <code>socket.SOL_SOCKET</code>. This is a common operation done on sockets where at the socket level, I want to set the option <code>socket.SO_REUSEADDR</code>. What this does is, if I close this socket, I don't want the operating
+                    system to hold it in a closed state, listening to packets. I want it to immediately make the address available so I can run it again.<br> Now I am going to bind it. <br> The first thing inside the bind brackets is the interface it
+                    will listen on. I will leave it blank for all interfaces. For the port, I am going to pick a high port because I am not running as root and want to be able to listen. I saw a tutorial where they used port 2222 and it worked well, so
+                    I will use port 2222 as well. Normally, it is port 22. <br> I heard from one tutorial where the guy used a pre-written tool, which I would like to check out in a different project, that port 2222 is for endless SSH. It is not ideal
+                    to run, but for this project, I just want to focus on the coding aspect of things. <br> And the last thing I need to do is have this server socket listen or be bound to the port I want to listen on. That would be <code>server_sock.listen(223)</code>.
+                    This specifies an arbitrary number for how many connections I want to queue for accepting. From what I saw, some people use 100, but I will use 223. <br> Now, this doesn't actually do anything yet, but I will run it. <br>
+                </p>
+                <a><img src="images/H25Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>
+                    It runs but then immediately exits, as expected.<br> Just for the sake of demonstration, I will add <code>input()</code>. Now it will wait for me to input something. <br>
+                </p>
+                <a><img src="images/H26Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>
+                    But listening on its own doesn't do a whole lot. <br> I will add <strong>Netcat</strong>, as I will need it to connect to the SSH server through TCP. First, I downloaded <strong>Netcat</strong>, but it came zipped, so I created a new
+                    folder in <code>C:\Program Files</code> and unzipped it there.<br>
+                </p>
+                <a><img src="images/H27Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>
+                    Now I will add <strong>Netcat</strong> to my <strong>System PATH</strong>.<br>
+                </p>
+                <a><img src="images/H28Capture.PNG" alt="" class="responsive-img" /></a><br>
+                <a><img src="images/H29Capture.PNG" alt="" class="responsive-img" /></a><br>
+                <a><img src="images/H30Capture.PNG" alt="" class="responsive-img" /></a><br>
+                <a><img src="images/H31Capture.PNG" alt="" class="responsive-img" /></a><br>
+                <a><img src="images/H32Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>
+                    Now Netcat works, and I have even started a three-way handshake with my server. <br> Once this is complete, that's when <code>accept()</code> can get the connection from the queue. <br> So now I am able to start accepting the connection,
+                    but there's nothing to accept the socket and do anything with it. So, I will set that up now. <br> So instead of <code>input()</code>, I am going to use <code>client_sock, client_addr = server_sock.accept()</code>. <code>accept()</code>                    tells the server socket to check the queue of connections trying to connect to it and establish that connection. It returns a different socket (<code>client_sock</code>) for the listener to keep listening and the address (<code>client_addr</code>)
+                    of the client connecting. <br> So with that, I can do <code>print(f"Connection from {client_addr[0]}:{client_addr[1]}"). client_addr</code> is a tuple containing the IP and port, which is why I formatted it like this.<br> I can also
+                    write to the socket, so I am going to do that as well. <br>
+                </p>
+                <a><img src="images/H33Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>If I write 'hello', it shows up back in the program.<br></p>
+                <a><img src="images/H34Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>So, I have built a TCP socket. Now, that's a long way from getting me to an SSH server, but I am making progress. I want to build the SSH server, but I don't really want to write all of that myself. I will use the TCP socket and pass it
+                    up to a high-level library that will handle the SSH. <br> I will use a library called <strong>Paramiko</strong>.<br>
+                    <code>transport = paramiko.Transport(client_sock)</code> - So, I am basically saying, 'Hey Paramiko, take this socket that is established through a handshake, and now you use that to run an SSH server.' There are a few other things
+                    to get this started. Like an SSH server key, so I will use Paramiko to generate one. Next, I am gonna need some SSH server defined.<br> I will do something that is normally not supposed to be done, but I will fix it later. For now,
+                    I will just test it. I will use the Paramiko interface, and an interface class is partially defined, but it is not meant to be actually used. It's meant to be imported into some other class, and then the functions are redefined over
+                    it. However, I am going to use the raw interface right now. <br> I just found out that I don't have Paramiko, so I will install it. <br>
+                </p>
+                <a><img src="images/H35Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>As I said, I am doing something that is normally not supposed to be done, so I was expecting it to crash. Now, I will fix it and make it better. <br></p>
+                <a><img src="images/H36Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>Before I do that, I am going to handle some basic quality-of-life improvements that have been a bit of a hassle for me. The first thing I want to do is ensure I don't have to generate this key every time. <br></p>
+                <a><img src="images/H37Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>And now, if I run ls. </p>
+                <a><img src="images/H38Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>Because my SSH key changed, my client thought I was getting a man-in-the-middle attack, so I needed to remove the entry. Now it should let me connect. <br></p>
+                <a><img src="images/H39Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>Now I am able to connect, so there is a bit of progress. </p><br>
+                <a><img src="images/H40Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>Also, I am sick of restarting it every time, so I will add a <code>while True statement.</code> </p><br>
+                <p>And as you can see, I am making a new connection each time with different ports, but I don't have to restart the server. <br></p>
+                <a><img src="images/H41Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>And the last thing I want to do (which isn't necessary for what I am trying to achieve at this moment) is to log credentials and indicate if they failed. However, if I want to do anything more serious, I would have to create a thread,
+                    so I will do just that. <br></p>
+                <p>So now, instead of waiting for each client connection to finish and then going back to accepting, I am going to immediately print that there is a connection and start a thread to handle that connection. This way, hypothetically, two clients
+                    can connect at the same time. <br></p>
+                <p><code>class SSHServer(paramiko.ServerInterface):</code> This will handle working through which functions need to be called. I am only going to need to define one of them, called <code>check_auth_password</code>. <br> The login attempts
+                    are being logged now, so this meets the expectations I had for this app. <br>
+                </p>
+                <a><img src="images/H42Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>This is how the code looks at the end:<br></p>
+                <a><img src="images/H43Capture.PNG" alt="" class="responsive-img" /></a>
+
+
+
+
+            </section>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

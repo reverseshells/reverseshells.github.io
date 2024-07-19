@@ -1,0 +1,263 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+    <title>Generic Page - Massively by HTML5 UP</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+        .add-spacing {
+            margin-left: 10px;
+            /* Adjust the value as needed */
+        }
+        
+        .add-spacing2 {
+            margin-left: 50px;
+            /* Adjust the value as needed */
+        }
+        
+        .responsive-img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .collapsible {
+            background-color: #777;
+            color: white;
+            cursor: pointer;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+        }
+        
+        .active,
+        .collapsible:hover {
+            background-color: #555;
+        }
+        
+        .content {
+            padding: 0 10px;
+            display: none;
+            overflow: hidden;
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+        </header>
+
+        <!-- Nav -->
+        <nav id="nav">
+            <ul class="links">
+                <li class="active"><a href="index.html">Projects</a></li>
+                <li class="active"><a href="IDS_IPS_and_wazuh.html">IDS_IPS and wazuh</a></li>
+            </ul>
+            <ul class="icons">
+                <li><a href="https://www.linkedin.com/in/dzhaner-mustafov-229364284/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                <li><a href="https://github.com/reverseshells" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Post -->
+            <section class="post">
+                <header class="major">
+                    <h1>IDS/IPS and Wazuh implementation at the end.</h1>
+                </header>
+                <p><strong>Project description:</strong></p>
+                <p>I am going to create an Ubuntu machine with a GUI, even though I will primarily use the terminal. Additionally, I will set up IDS/IPS monitoring. <br></p>
+                <a><img src="images/I1Capture.PNG" alt="" class="responsive-img" /></a><br>
+                <p>After completing the initial setup, I downloaded the private key and deployed the VM. Once it was deployed, I clicked on "Go to Resource".<br></p>
+                <a><img src="images/I2Capture.PNG" alt="" class="responsive-img" /></a><br>
+                <p>As you can see in the picture above, the status is running. <br><br></p>
+                <p>After that, I clicked on "Connect." <br></p>
+                <a><img src="images/I3Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>I have successfully connected to my Ubuntu VM. <br></p>
+                <a><img src="images/I4Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>I need to install the graphical interface for Ubuntu. </p>
+                <a><img src="images/I5Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>Oops! While reviewing in the image above, I noticed that I forgot to take an updated image. I missed the "N" in the command. The correct command should be: sudo DEBIAN_FRONTEND=noninteractive apt-get -y install xfce4 <br></p>
+                <p>Maybe because I have used Linux daily on my laptop and Windows on my PC, I personally prefer GNOME over LightDM. For a lower-spec VM, LightDM might be a better option due to its lighter resource usage. However, since I used the same power
+                    VM for Windows, which is heavier than GNOME, I will go with the more comfortable option for me and choose GNOME. </p><br>
+                <a><img src="images/I6Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>I changed my mind; I will go with XFCE. If I don't like it, I will switch to GNOME.<br></p>
+                <a><img src="images/I7Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>I am going to install xrdp in order to use Microsoft Remote Desktop Protocol (RDP) and access my machine through Remote Desktop Connection. <br></p>
+                <a><img src="images/I8Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>Now, I have to enable it. </p>
+                <a><img src="images/I9Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>Now, I need to grant certificate access to the RDP user so I can access the Ubuntu machine through Remote Desktop Connection.<br></p>
+                <a><img src="images/I10Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>I also need to configure RDP to use XFCE as my desktop environment when I start the session. <br></p>
+                <p>Now I need to restart the RDP service for the changes to take effect. <br></p>
+                <a><img src="images/I10.1Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>I also need to set the password for my account since RDP cannot accept SSH key authentication. <br></p>
+                <a><img src="images/I11Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>I have created a new inbound security rule and set the service to RDP. <br></p>
+                <a><img src="images/I12Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>I have successfully connected to my Ubuntu machine.<br></p>
+                <a><img src="images/I15Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>I am getting an error on my default browser. <br></p>
+                <a><img src="images/I16Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>I installed Firefox and can now proceed with installing Suricata. <br></p>
+                <a><img src="images/I17Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>I took a look at the Suricata documentation, and it's fantastic. One great thing is that Suricata provides binary packages for the latest version from the original OISF repository, which is essential for Suricata. I just followed the steps,
+                    as shown in the picture below. <br></p>
+                <a><img src="images/I18Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>Next, I will edit my configuration file. </p>
+                <a><img src="images/I19Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>While looking at it, I noticed it is similar to Snort, with which I have a little experience. <br></p>
+                <a><img src="images/I20Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>So the first thing I need to do is configure the variables. The more specific the configuration, the better the accuracy and performance. I need to specify my home network subnet address or the actual network subnet I would like to monitor.
+                    <br></p>
+                <p>I will obtain this information by running `ifconfig` in the terminal. <br></p>
+                <p>So apparently it didn't come preinstalled, but it gave me the command to install it. <br></p>
+                <a><img src="images/I21Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>I'm actually going to use the `ip a s` command to find the entire network subnet range. <br></p>
+                <a><img src="images/I22Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <a><img src="images/I23Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>I checked the af-packet, and it seems the interface name is correct for me.<br></p>
+                <a><img src="images/I24Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>I will change the Community ID to match the records to the output of other tools. <br></p>
+                <a><img src="images/I25Capture.PNG" alt="" class="responsive-img" /></a><br>
+                <a><img src="images/I26Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>I'm going to load the distribution rule file first. Once that's done, I'll perform a Suricata configuration test to ensure there are no issues with the options and syntax used within the Suricata configuration file. <br></p>
+                <a><img src="images/I27Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>Now that it's done, I'll attempt to list the contents of the new directory. <br></p>
+                <a><img src="images/I28Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>One of the really cool features that Suricata offers is the ability to specify our own sources. By default, Suricata allows you to select other sources from which you can retrieve rules or rulesets. <br></p>
+                <a><img src="images/I29Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>So, it's going to download the index of sources. These are all the sources that will provide me with various types of rulesets based on my specific requirements. </p>
+                <p>In order to add or enable malsilo/win-malware source, I am going to use the command shown in the picture below. <br></p>
+                <a><img src="images/I30Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>
+                    Now I can run `sudo suricata-update` to ensure I get the latest ruleset. <br> sudo systemctl disable suricata.service <br> This command will prevent Suricata from starting automatically at boot time. <br> To test the configuration
+                    file, I used the second command in the image below: <br> sudo suricata -T -c /etc/suricata/suricata.yaml -v <br><br> This command loads the distribution rule file and performs a Suricata configuration test to ensure there are no errors
+                    in the options and syntax used within the Suricata configuration file. <br>
+                </p>
+                <a><img src="images/I31Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>So it is running in test mode and will provide an overview of the resources and the actual fast output device. The logging configuration is in fast mode and also includes the eve-log output device, which outputs in JSON format. These are
+                    useful because I can find all the intrusion logs in `fast.log`, and `eve.json` contains the same but a bit more detailed information in JSON format. Additionally, I can see that one rule file was processed, with 38,367 rules successfully
+                    loaded and 0 rules failed. <br></p>
+                <p>Okay, so that is done. I know that Suricata will run without any issues. </p>
+                <a><img src="images/I32Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>Let me start suricata.service. <br> And check its status.<br> </p>
+                <a><img src="images/I33Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>Now it is running in the background, monitoring the network traffic, and logging all files to the directory shown in the picture below. <br></p>
+                <a><img src="images/I34Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>As you can see, I have the `fast.log` file containing the intrusion logs stored in standard output format, and `eve.json` which saves them in JSON format.<br></p>
+                <p>I will run a quick test and utilize one of the Suricata rules included within the default rules file stored in the directory you saw earlier and you will see in the picture below. </p>
+                <a><img src="images/I35.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>I'm going to test whether it is monitoring and tracking.<br></p>
+                <a><img src="images/I36Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>The information is considered malicious because it indicates that I have gained access to root based on the test above, or an intruder could have gained access. <br></p>
+                <p>Let's see if that was logged. </p>
+                <a><img src="images/I37Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>As you can see, it was logged, and suricata it is running in the background, which is good. <br></p>
+                <a><img src="images/I38Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>I am going to store my rules and update them in the actual suricata.yaml configuration file.</p>
+                <p>Based on what I've watched, the syntax is very similar to Snort, on which I have some knowledge from the TryHackMe SOC L1 course. Here is my custom rule that will track any alerts and any pings coming from any external network to my HOME_NET.
+                </p>
+                <a><img src="images/I39Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>Now, I will modify my YAML configuration file to add the rule I just created.<br></p>
+                <a><img src="images/I40Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <a><img src="images/I41Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>Now that this is done, I can start the suricata.service again.<br></p>
+                <p>At first, my pings were timing out, but for this project, I will make the machine easier to find on the internet. To see the icmp ping detection rule I just wrote, I will allow any ICMP traffic on any port. <br></p>
+                <a><img src="images/I42Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <a><img src="images/I43Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <a><img src="images/I44Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>I would like to look into `eve.json`. I think I will use `jq` because the data is currently not readable in its JSON format. I downloaded the `jq` package using `sudo apt-get install jq`. `eve.json` gives quite a bit more information compared
+                    to `fast.log` now that I can see them side by side.<br></p>
+                <a><img src="images/I45Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>Okey, I have been able to look at the logs and the log format. Now, I want to configure Suricata with Wazuh. <br></p>
+                <p>I have created a new Ubuntu VM on which I will configure the Wazuh server. Ideally, setting up Wazuh on a server with the Elastic Stack would be better, especially for a company. However, for simplicity and due to limited resources, I
+                    will use this method. <br> Maybe I will do a dedicated project to set up Wazuh properly in the future.<br></p>
+                <a><img src="images/I46Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>Wazuh has finished installing, and I have received my login details. <br></p>
+                <a><img src="images/I47Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>I installed Firefox on the new machine, checked my IP address, and connected to Wazuh. <br></p>
+                <a><img src="images/I48Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <a><img src="images/I49.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>I will add my Ubuntu VM with Suricata as an agent. <br> I followed the instructions from the image. <br></p>
+                <a><img src="images/I50Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>Now, let me check the status. <br></p>
+                <a><img src="images/I51Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>It is running. I will check on the server side as well.<br></p>
+                <a><img src="images/I52Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>Everything looks good. <br></p>
+                <p>You may notice that the IPs in the images below are different. I accidentally chose a different resource group, so the VMs ended up in different virtual networks. However, I fixed this issue, and now the agent is connected. <br>
+                </p>
+                <a><img src="images/I54Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <a><img src="images/I55Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>I will go to "Threat Hunting" and then select "Events" at the top to see the actual events themselves. <br>
+                </p>
+                <a><img src="images/I56.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>I have added <code>eve.json</code> to <code>/var/ossec/etc/ossec.conf</code>. </p>
+                <a><img src="images/I57Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>Now I can monitor my Suricata IDS/IPS through Wazuh. <br></p>
+                <a><img src="images/I58Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>Now I can apply filters to see my Suricata logs. <br></p>
+                <a><img src="images/I59Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>Now, under Events, I can see the Suricata logs. <br></p>
+                <a><img src="images/I60Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <a><img src="images/I61Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>Let me test it. <br></p>
+                <a><img src="images/I62Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <a><img src="images/I63Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>The good thing about setting it up with eve.json is that I can see table information and detailed information in JSON, which is made readable. <br></p>
+                <a><img src="images/I64Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <a><img src="images/I65Capture.PNG" alt="" class="responsive-img" /></a><br><br>
+                <p>And this will conclude my project. Thank you for reading! If you have any questions, feel free to message me on LinkedIn. </p>
+
+
+            </section>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var coll = document.getElementsByClassName("collapsible");
+            for (var i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.display === "block") {
+                        content.style.display = "none";
+                    } else {
+                        content.style.display = "block";
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
